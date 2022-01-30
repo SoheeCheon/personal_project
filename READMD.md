@@ -1,5 +1,10 @@
 ## Dacon 집값예측 
 
+###  가상환경 설정하기
+
+1. `venv` 파일 생성
+2. `source venv/Scripts/activate` 로 가상환경 활성화
+
 ### 1. Pandas
 
 #### 데이터 불러오기
