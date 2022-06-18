@@ -5,27 +5,26 @@ cnt = 0
 if sum(lst) == S:
     cnt += 1
 
-result = set()
+result = []
 
-
-def find(sset):
+def find(sset, n):
     global cnt, result
     if sset and sum(sset) == S:
         if not sset in result:
-            result.add(tuple(sset))
+            result.append(sset)
             cnt += 1
 
     if len(sset) == N-1:
         return
 
-    for ele in lst:
+    for ele in range(n, len(lst)):
         if not ele in sset:
             sset.add(ele)
-            find(sset)
+            find(sset, n+1)
             sset.remove(ele)
 
 
 my_set = set()
-find(my_set)
+find(my_set, 0)
 
 print(cnt)
