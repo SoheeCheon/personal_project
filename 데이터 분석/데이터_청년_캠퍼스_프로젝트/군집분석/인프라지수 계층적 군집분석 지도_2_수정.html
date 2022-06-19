@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f2550f67ff8d4236bfb9b7413b039ddc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f2550f67ff8d4236bfb9b7413b039ddc" ></div>
+        
+</body>
+<script>    
+    
+            var map_f2550f67ff8d4236bfb9b7413b039ddc = L.map(
+                "map_f2550f67ff8d4236bfb9b7413b039ddc",
+                {
+                    center: [36.42768, 127.936191],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4aa9af38d1f84ccfa1550e0006761ea0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var marker_ff3f739908034fc8bf940086d19ffde0 = L.marker(
+                [37.53138556, 126.9799076],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_87efb5ec052946cc95dc39433e36841c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_ff3f739908034fc8bf940086d19ffde0.setIcon(icon_87efb5ec052946cc95dc39433e36841c);
+        
+    
+            marker_ff3f739908034fc8bf940086d19ffde0.bindTooltip(
+                `<div>
+                     ('서울_용산구', '군집3', 6.336886987493546)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60695c20e3d84662b0c003e5d8356361 = L.marker(
+                [37.55103004, 127.0410588],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_a109a140fedb47b59b20f957b0f2358a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_60695c20e3d84662b0c003e5d8356361.setIcon(icon_a109a140fedb47b59b20f957b0f2358a);
+        
+    
+            marker_60695c20e3d84662b0c003e5d8356361.bindTooltip(
+                `<div>
+                     ('서울_성동구', '군집3', 5.511857818587703)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4221d7eec2294544b36708f40d239cd4 = L.marker(
+                [37.54672166, 127.0857458],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_45e32fd4876c469f8410f901628189c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_4221d7eec2294544b36708f40d239cd4.setIcon(icon_45e32fd4876c469f8410f901628189c5);
+        
+    
+            marker_4221d7eec2294544b36708f40d239cd4.bindTooltip(
+                `<div>
+                     ('서울_광진구', '군집3', 6.13391593833677)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_37af3215b1f24fbd83c75a83d2e42fdc = L.marker(
+                [37.58195725, 127.0548482],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_d6fe73e618034f778902698e6cdaf802 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_37af3215b1f24fbd83c75a83d2e42fdc.setIcon(icon_d6fe73e618034f778902698e6cdaf802);
+        
+    
+            marker_37af3215b1f24fbd83c75a83d2e42fdc.bindTooltip(
+                `<div>
+                     ('서울_동대문구', '군집2', 5.112106639230104)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_17de30d717ba4b7582789d6ec1f8c9fb = L.marker(
+                [37.59781902, 127.0928839],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_4ef0a84755ce4530a638508abf6a81e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_17de30d717ba4b7582789d6ec1f8c9fb.setIcon(icon_4ef0a84755ce4530a638508abf6a81e1);
+        
+    
+            marker_17de30d717ba4b7582789d6ec1f8c9fb.bindTooltip(
+                `<div>
+                     ('서울_중랑구', '군집3', 5.865862267645707)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_565852c7f49747e0b8fbc7898e2a49a6 = L.marker(
+                [37.60570143, 127.0175783],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_d10699c05656409cb7cf5c830b92a0cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_565852c7f49747e0b8fbc7898e2a49a6.setIcon(icon_d10699c05656409cb7cf5c830b92a0cd);
+        
+    
+            marker_565852c7f49747e0b8fbc7898e2a49a6.bindTooltip(
+                `<div>
+                     ('서울_성북구', '군집3', 6.454460153942624)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b29d16fa31942bc83f091e487bd48fb = L.marker(
+                [37.64347732, 127.0111848],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_db167898bf1a426bab2c3bec063bc8ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3b29d16fa31942bc83f091e487bd48fb.setIcon(icon_db167898bf1a426bab2c3bec063bc8ae);
+        
+    
+            marker_3b29d16fa31942bc83f091e487bd48fb.bindTooltip(
+                `<div>
+                     ('서울_강북구', '군집2', 4.906368805866466)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8b3601a8f7b4267b950dc3910976bf6 = L.marker(
+                [37.66910528, 127.032367],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_97fe6df5966840c78cffa6ce2e5fb527 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_a8b3601a8f7b4267b950dc3910976bf6.setIcon(icon_97fe6df5966840c78cffa6ce2e5fb527);
+        
+    
+            marker_a8b3601a8f7b4267b950dc3910976bf6.bindTooltip(
+                `<div>
+                     ('서울_도봉구', '군집3', 6.04390407056558)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3bedc437337644589b905c90e55ebfff = L.marker(
+                [37.65251633, 127.0750336],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_329dac4eba79433badfe0577478b0bac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3bedc437337644589b905c90e55ebfff.setIcon(icon_329dac4eba79433badfe0577478b0bac);
+        
+    
+            marker_3bedc437337644589b905c90e55ebfff.bindTooltip(
+                `<div>
+                     ('서울_노원구', '군집2', 4.908640807789477)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7ea5405ebec448e4897d375e91077c8f = L.marker(
+                [37.61921535, 126.9270283],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_099833ba5eb44200b7b5ea0e47c4c042 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_7ea5405ebec448e4897d375e91077c8f.setIcon(icon_099833ba5eb44200b7b5ea0e47c4c042);
+        
+    
+            marker_7ea5405ebec448e4897d375e91077c8f.bindTooltip(
+                `<div>
+                     ('서울_은평구', '군집3', 5.328486654953247)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d7557bd5fc24ad5a8e42a09d9b98059 = L.marker(
+                [37.57778646, 126.9390632],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_a79022ef1bd744eca6211bb6268d3cc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_0d7557bd5fc24ad5a8e42a09d9b98059.setIcon(icon_a79022ef1bd744eca6211bb6268d3cc8);
+        
+    
+            marker_0d7557bd5fc24ad5a8e42a09d9b98059.bindTooltip(
+                `<div>
+                     ('서울_서대문구', '군집3', 6.128362770881164)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d4c5a159664f422283279e89be0e2e0d = L.marker(
+                [37.55931222, 126.908264],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_ff3df87c87774f27bbfc1c4b061abeaa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d4c5a159664f422283279e89be0e2e0d.setIcon(icon_ff3df87c87774f27bbfc1c4b061abeaa);
+        
+    
+            marker_d4c5a159664f422283279e89be0e2e0d.bindTooltip(
+                `<div>
+                     ('서울_마포구', '군집2', 4.716359996994667)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38d7cb2b54cc4b8781e60897fdcf0a97 = L.marker(
+                [37.52478964, 126.8554792],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_aaa6512bf6434d008dca29fb6634bc43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_38d7cb2b54cc4b8781e60897fdcf0a97.setIcon(icon_aaa6512bf6434d008dca29fb6634bc43);
+        
+    
+            marker_38d7cb2b54cc4b8781e60897fdcf0a97.bindTooltip(
+                `<div>
+                     ('서울_양천구', '군집2', 4.803666030173615)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_73076bee893545b0bd4a8ac83f6cf3d5 = L.marker(
+                [37.56123594, 126.8228036],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_5d14778984064c419d6f338e1d573cbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_73076bee893545b0bd4a8ac83f6cf3d5.setIcon(icon_5d14778984064c419d6f338e1d573cbe);
+        
+    
+            marker_73076bee893545b0bd4a8ac83f6cf3d5.bindTooltip(
+                `<div>
+                     ('서울_강서구', '군집3', 5.78788745185094)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_74519dd7a82d45159df9a046b51fd016 = L.marker(
+                [37.49440412, 126.8563021],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_5624b06ed5bc4df4a8c010283b083c9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_74519dd7a82d45159df9a046b51fd016.setIcon(icon_5624b06ed5bc4df4a8c010283b083c9c);
+        
+    
+            marker_74519dd7a82d45159df9a046b51fd016.bindTooltip(
+                `<div>
+                     ('서울_구로구', '군집3', 5.571802579924078)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_057a40acacfe4fa08870b88a04742442 = L.marker(
+                [37.46056912, 126.9008177],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_0037df188b8d47a9818cee18c4b461db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_057a40acacfe4fa08870b88a04742442.setIcon(icon_0037df188b8d47a9818cee18c4b461db);
+        
+    
+            marker_057a40acacfe4fa08870b88a04742442.bindTooltip(
+                `<div>
+                     ('서울_금천구', '군집3', 6.008975895648401)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33f9c2cbe3c74063886479bd95a392fe = L.marker(
+                [37.52230985, 126.9101694],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_9b07c072d9cf4df08ca8b6524446e629 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_33f9c2cbe3c74063886479bd95a392fe.setIcon(icon_9b07c072d9cf4df08ca8b6524446e629);
+        
+    
+            marker_33f9c2cbe3c74063886479bd95a392fe.bindTooltip(
+                `<div>
+                     ('서울_영등포구', '군집2', 4.616786097015793)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4179ef78f8ba4c4383738e0a873e1279 = L.marker(
+                [37.49887636, 126.9516402],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_85801d963a3546388e8475567eb791a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_4179ef78f8ba4c4383738e0a873e1279.setIcon(icon_85801d963a3546388e8475567eb791a3);
+        
+    
+            marker_4179ef78f8ba4c4383738e0a873e1279.bindTooltip(
+                `<div>
+                     ('서울_동작구', '군집3', 6.041140256491769)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_903b227ff59f4ddaafa7943d294d432b = L.marker(
+                [37.46737656, 126.9453355],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_c8b57d43444e4427a4c5437dad87b397 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_903b227ff59f4ddaafa7943d294d432b.setIcon(icon_c8b57d43444e4427a4c5437dad87b397);
+        
+    
+            marker_903b227ff59f4ddaafa7943d294d432b.bindTooltip(
+                `<div>
+                     ('서울_관악구', '군집1', 8.42331780494857)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba24060ce7d341bea69130c96903c043 = L.marker(
+                [37.55045136, 127.1470146],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_3a04ccd6d5ae4fa48bc77b266bc680eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ba24060ce7d341bea69130c96903c043.setIcon(icon_3a04ccd6d5ae4fa48bc77b266bc680eb);
+        
+    
+            marker_ba24060ce7d341bea69130c96903c043.bindTooltip(
+                `<div>
+                     ('서울_강동구', '군집2', 4.2710180567635065)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f28552323c54a518041560e7489a0ae = L.marker(
+                [35.10547796, 129.0315402],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_a7ca1ad755cb4417a42f264717dbc4ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2f28552323c54a518041560e7489a0ae.setIcon(icon_a7ca1ad755cb4417a42f264717dbc4ab);
+        
+    
+            marker_2f28552323c54a518041560e7489a0ae.bindTooltip(
+                `<div>
+                     ('부산_중구', '군집4', 2.434548412722927)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_435408e8262a47faaf09bc4aabc53e07 = L.marker(
+                [35.10296452, 129.0149128],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_6ed20593d1b44f31991ea44fa01c6329 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_435408e8262a47faaf09bc4aabc53e07.setIcon(icon_6ed20593d1b44f31991ea44fa01c6329);
+        
+    
+            marker_435408e8262a47faaf09bc4aabc53e07.bindTooltip(
+                `<div>
+                     ('부산_서구', '군집2', 4.828267687238056)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87246bbb114a4e24bb01bfa9cd7d2784 = L.marker(
+                [35.1291866, 129.0445861],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_314b8c57a138482598005fae6573c0b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_87246bbb114a4e24bb01bfa9cd7d2784.setIcon(icon_314b8c57a138482598005fae6573c0b7);
+        
+    
+            marker_87246bbb114a4e24bb01bfa9cd7d2784.bindTooltip(
+                `<div>
+                     ('부산_동구', '군집2', 3.673135890187444)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a018f02ec224f3ebb17b87d1f8a9845 = L.marker(
+                [35.07865091, 129.0648202],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_5f241216faec43ac8ec72c458938436c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5a018f02ec224f3ebb17b87d1f8a9845.setIcon(icon_5f241216faec43ac8ec72c458938436c);
+        
+    
+            marker_5a018f02ec224f3ebb17b87d1f8a9845.bindTooltip(
+                `<div>
+                     ('부산_영도구', '군집2', 4.227701934170891)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19dcb32e55e14219b3b465b16c4d1d45 = L.marker(
+                [35.16524533, 129.0430601],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_f64d1409ed35423286788ededb4d5fd3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_19dcb32e55e14219b3b465b16c4d1d45.setIcon(icon_f64d1409ed35423286788ededb4d5fd3);
+        
+    
+            marker_19dcb32e55e14219b3b465b16c4d1d45.bindTooltip(
+                `<div>
+                     ('부산_진구', '군집2', 3.4727881961824605)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0352e010114e471881feee08538666af = L.marker(
+                [35.20621201, 129.0792188],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_c4d7638bd8e242b681d296c9e64611e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0352e010114e471881feee08538666af.setIcon(icon_c4d7638bd8e242b681d296c9e64611e2);
+        
+    
+            marker_0352e010114e471881feee08538666af.bindTooltip(
+                `<div>
+                     ('부산_동래구', '군집2', 3.6058991288885873)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d42649d536e48f69683904ded9a38e2 = L.marker(
+                [35.12613858, 129.0940042],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_fb329e7a286c467499d8ac3b381bb922 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5d42649d536e48f69683904ded9a38e2.setIcon(icon_fb329e7a286c467499d8ac3b381bb922);
+        
+    
+            marker_5d42649d536e48f69683904ded9a38e2.bindTooltip(
+                `<div>
+                     ('부산_남구', '군집2', 4.613904273708406)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7d78ea689dfe46bda8e29090570084c9 = L.marker(
+                [35.22925311, 129.0234651],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_0089b33660bc4e29a97b42e57d7608c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_7d78ea689dfe46bda8e29090570084c9.setIcon(icon_0089b33660bc4e29a97b42e57d7608c6);
+        
+    
+            marker_7d78ea689dfe46bda8e29090570084c9.bindTooltip(
+                `<div>
+                     ('부산_북구', '군집3', 5.203974330701684)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8c75450000b04afd87bdc0110af99585 = L.marker(
+                [35.19385742, 129.1535891],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_4b417f36cc384d71ba0d2660c77654c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8c75450000b04afd87bdc0110af99585.setIcon(icon_4b417f36cc384d71ba0d2660c77654c5);
+        
+    
+            marker_8c75450000b04afd87bdc0110af99585.bindTooltip(
+                `<div>
+                     ('부산_해운대구', '군집2', 4.062954469116088)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8c15202e9ab94e9b9529840319ac536e = L.marker(
+                [35.0893528, 128.9743481],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_e21ce5d3ac814f9e86f94d855c6b54bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8c15202e9ab94e9b9529840319ac536e.setIcon(icon_e21ce5d3ac814f9e86f94d855c6b54bf);
+        
+    
+            marker_8c15202e9ab94e9b9529840319ac536e.bindTooltip(
+                `<div>
+                     ('부산_사하구', '군집2', 4.674850766341142)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1dfe1f2d3cda465584e898431f748507 = L.marker(
+                [35.25889463, 129.09153],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_6094f39d273646aaafbadce9a2d39355 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1dfe1f2d3cda465584e898431f748507.setIcon(icon_6094f39d273646aaafbadce9a2d39355);
+        
+    
+            marker_1dfe1f2d3cda465584e898431f748507.bindTooltip(
+                `<div>
+                     ('부산_금정구', '군집2', 4.572485909845505)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a0b6a13e4bd741b8995030d0b6a58406 = L.marker(
+                [35.13837168, 128.8924423],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_6fe1b3a57de64929b1ffe912df347089 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_a0b6a13e4bd741b8995030d0b6a58406.setIcon(icon_6fe1b3a57de64929b1ffe912df347089);
+        
+    
+            marker_a0b6a13e4bd741b8995030d0b6a58406.bindTooltip(
+                `<div>
+                     ('부산_강서구', '군집1', 7.137548618290974)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c13c7208d6a440dabafcf4f78a7e140 = L.marker(
+                [35.18241804, 129.0829344],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_1520386891204c46b7bce14877becd58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1c13c7208d6a440dabafcf4f78a7e140.setIcon(icon_1520386891204c46b7bce14877becd58);
+        
+    
+            marker_1c13c7208d6a440dabafcf4f78a7e140.bindTooltip(
+                `<div>
+                     ('부산_연제구', '군집2', 3.8519010685982074)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2cc1331d2e9749619606a3a6387f2222 = L.marker(
+                [35.16133249, 129.1111625],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_74f5694881894e37ad77397c0db2ac4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2cc1331d2e9749619606a3a6387f2222.setIcon(icon_74f5694881894e37ad77397c0db2ac4d);
+        
+    
+            marker_2cc1331d2e9749619606a3a6387f2222.bindTooltip(
+                `<div>
+                     ('부산_수영구', '군집2', 4.259112104254285)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_613a8df676a94812ae6490a4249c748b = L.marker(
+                [35.15803505, 128.9865939],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_a3215ebe7fa54f489d794ab6faed1a8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_613a8df676a94812ae6490a4249c748b.setIcon(icon_a3215ebe7fa54f489d794ab6faed1a8a);
+        
+    
+            marker_613a8df676a94812ae6490a4249c748b.bindTooltip(
+                `<div>
+                     ('부산_사상구', '군집3', 6.233003172771077)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_46488ba5c50f450f95c0f555a9b9e792 = L.marker(
+                [35.2445, 129.2222],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_37ddb2aa5ee44474b28f3ef91b7efd30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_46488ba5c50f450f95c0f555a9b9e792.setIcon(icon_37ddb2aa5ee44474b28f3ef91b7efd30);
+        
+    
+            marker_46488ba5c50f450f95c0f555a9b9e792.bindTooltip(
+                `<div>
+                     ('부산_기장군', '군집3', 5.326057606551194)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d20a080464d346128e17a1e6461285cf = L.marker(
+                [35.86653525, 128.5936057],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_6c262bc05000497f90642d9c70a09712 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d20a080464d346128e17a1e6461285cf.setIcon(icon_6c262bc05000497f90642d9c70a09712);
+        
+    
+            marker_d20a080464d346128e17a1e6461285cf.bindTooltip(
+                `<div>
+                     ('대구_중구', '군집4', 1.4072628867149963)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8de924930d3e4ccb95bee1c876038b74 = L.marker(
+                [35.93444401, 128.6856499],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_77cc84b9b2154b7290bf7e51503311b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8de924930d3e4ccb95bee1c876038b74.setIcon(icon_77cc84b9b2154b7290bf7e51503311b7);
+        
+    
+            marker_8de924930d3e4ccb95bee1c876038b74.bindTooltip(
+                `<div>
+                     ('대구_동구', '군집2', 4.786208817172503)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d7e143c49d974d4781867a63cc0b57e6 = L.marker(
+                [35.87500168, 128.5496976],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_220985f89ddb473ea3c41daa8e579ffc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d7e143c49d974d4781867a63cc0b57e6.setIcon(icon_220985f89ddb473ea3c41daa8e579ffc);
+        
+    
+            marker_d7e143c49d974d4781867a63cc0b57e6.bindTooltip(
+                `<div>
+                     ('대구_서구', '군집2', 4.212655501268461)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8cc841821b87406da58708baea8b5c6b = L.marker(
+                [35.83517828, 128.5853297],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_f24e10cfa9af40d9a8f1efe9049c9a4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8cc841821b87406da58708baea8b5c6b.setIcon(icon_f24e10cfa9af40d9a8f1efe9049c9a4d);
+        
+    
+            marker_8cc841821b87406da58708baea8b5c6b.bindTooltip(
+                `<div>
+                     ('대구_남구', '군집2', 4.223506994325366)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7ed992fe0a34415abe43582d79d05016 = L.marker(
+                [35.92892764, 128.5772056],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_72a9a35be9d54eccb004cbc2baa0fb84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_7ed992fe0a34415abe43582d79d05016.setIcon(icon_72a9a35be9d54eccb004cbc2baa0fb84);
+        
+    
+            marker_7ed992fe0a34415abe43582d79d05016.bindTooltip(
+                `<div>
+                     ('대구_북구', '군집3', 5.448834537123477)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_534a8e11e2d346ababca971d4bb11935 = L.marker(
+                [35.83384974, 128.6612732],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_6e50c9eb9e7d4e31aa80c3eb27bd24b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_534a8e11e2d346ababca971d4bb11935.setIcon(icon_6e50c9eb9e7d4e31aa80c3eb27bd24b0);
+        
+    
+            marker_534a8e11e2d346ababca971d4bb11935.bindTooltip(
+                `<div>
+                     ('대구_수성구', '군집2', 3.4580979931612124)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c08964705e8243af9d9d6466dd3e3a6d = L.marker(
+                [35.82748641, 128.529204],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_497972f926bc4906b4ef10f650e1415d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c08964705e8243af9d9d6466dd3e3a6d.setIcon(icon_497972f926bc4906b4ef10f650e1415d);
+        
+    
+            marker_c08964705e8243af9d9d6466dd3e3a6d.bindTooltip(
+                `<div>
+                     ('대구_달서구', '군집2', 4.7572588297565925)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7964a314fb8d463183bd140594976028 = L.marker(
+                [35.7596109, 128.4982969],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_f361a4112e9a4885bb5c653003a9305a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_7964a314fb8d463183bd140594976028.setIcon(icon_f361a4112e9a4885bb5c653003a9305a);
+        
+    
+            marker_7964a314fb8d463183bd140594976028.bindTooltip(
+                `<div>
+                     ('대구_달성군', '군집3', 5.778111766232156)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_69bd69ee8ab24cdf937d09fe4319db4e = L.marker(
+                [37.46909379, 126.4828638],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_11fe4c8023744e73b922c0515e3dec1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_69bd69ee8ab24cdf937d09fe4319db4e.setIcon(icon_11fe4c8023744e73b922c0515e3dec1e);
+        
+    
+            marker_69bd69ee8ab24cdf937d09fe4319db4e.bindTooltip(
+                `<div>
+                     ('인천_중구', '군집1', 10.167854557071038)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_96effd4514f648b7bd191925a2435d41 = L.marker(
+                [37.48319411, 126.6395434],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_ddf344b846144cffa6ced646c0b30e7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_96effd4514f648b7bd191925a2435d41.setIcon(icon_ddf344b846144cffa6ced646c0b30e7f);
+        
+    
+            marker_96effd4514f648b7bd191925a2435d41.bindTooltip(
+                `<div>
+                     ('인천_동구', '군집2', 3.897036465850537)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8da630dd8a0745089f1c6f4420766f57 = L.marker(
+                [37.45259376, 126.6646576],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_d4e02b51af6b4c6db915aa3b803c2573 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_8da630dd8a0745089f1c6f4420766f57.setIcon(icon_d4e02b51af6b4c6db915aa3b803c2573);
+        
+    
+            marker_8da630dd8a0745089f1c6f4420766f57.bindTooltip(
+                `<div>
+                     ('인천_미추홀구', '군집1', 6.5173121779049366)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4352ab0728ec49db8fdc32079a8d7522 = L.marker(
+                [37.39619493, 126.6494242],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_bd64a8d5e35e4b64822ce0b4d08f70d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_4352ab0728ec49db8fdc32079a8d7522.setIcon(icon_bd64a8d5e35e4b64822ce0b4d08f70d9);
+        
+    
+            marker_4352ab0728ec49db8fdc32079a8d7522.bindTooltip(
+                `<div>
+                     ('인천_연수구', '군집1', 6.903465761138927)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23415963c4244fd49dfa25f7050b20bd = L.marker(
+                [37.43135604, 126.7264666],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_e916fc67fde7468b8f03069919b6376c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_23415963c4244fd49dfa25f7050b20bd.setIcon(icon_e916fc67fde7468b8f03069919b6376c);
+        
+    
+            marker_23415963c4244fd49dfa25f7050b20bd.bindTooltip(
+                `<div>
+                     ('인천_남동구', '군집2', 4.990754496296707)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_15542929f6194056a2fc1eb3c6e8f834 = L.marker(
+                [37.49666082, 126.7212083],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_3438d168b78c4186990f78aeb66dd174 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_15542929f6194056a2fc1eb3c6e8f834.setIcon(icon_3438d168b78c4186990f78aeb66dd174);
+        
+    
+            marker_15542929f6194056a2fc1eb3c6e8f834.bindTooltip(
+                `<div>
+                     ('인천_부평구', '군집3', 5.785759699643744)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4226ce2509d44e92aa5b41318797a3e3 = L.marker(
+                [37.55729939, 126.7347032],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_2e8ab8fce6f348ef9d7b2b5943ac471d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_4226ce2509d44e92aa5b41318797a3e3.setIcon(icon_2e8ab8fce6f348ef9d7b2b5943ac471d);
+        
+    
+            marker_4226ce2509d44e92aa5b41318797a3e3.bindTooltip(
+                `<div>
+                     ('인천_계양구', '군집3', 5.999447039084109)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3aa3910da9ef4875b82c7004e20aea6e = L.marker(
+                [37.55783907, 126.6563686],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_7fcec486243b4f6fb3b941f2467a6cca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_3aa3910da9ef4875b82c7004e20aea6e.setIcon(icon_7fcec486243b4f6fb3b941f2467a6cca);
+        
+    
+            marker_3aa3910da9ef4875b82c7004e20aea6e.bindTooltip(
+                `<div>
+                     ('인천_서구', '군집1', 7.175866450361816)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac5577e5ea0a4c89939cb9e4a3a80ae2 = L.marker(
+                [37.71245904, 126.4020466],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_2bc8fdf6aa5d436c978448b5844fe8ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ac5577e5ea0a4c89939cb9e4a3a80ae2.setIcon(icon_2bc8fdf6aa5d436c978448b5844fe8ba);
+        
+    
+            marker_ac5577e5ea0a4c89939cb9e4a3a80ae2.bindTooltip(
+                `<div>
+                     ('인천_강화군', '군집2', 4.350969664743349)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4aa43b4f3f2f44d382da8c46d3e75c56 = L.marker(
+                [35.11738405, 126.9494622],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_356bb928f87445a5b80d42b67df799e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4aa43b4f3f2f44d382da8c46d3e75c56.setIcon(icon_356bb928f87445a5b80d42b67df799e5);
+        
+    
+            marker_4aa43b4f3f2f44d382da8c46d3e75c56.bindTooltip(
+                `<div>
+                     ('광주_동구', '군집2', 3.6099813968966687)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_607ae5a79be2465fa714a26d830b914c = L.marker(
+                [35.13569669, 126.8507245],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_adb495f6f03648559d736528c9f33ac7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_607ae5a79be2465fa714a26d830b914c.setIcon(icon_adb495f6f03648559d736528c9f33ac7);
+        
+    
+            marker_607ae5a79be2465fa714a26d830b914c.bindTooltip(
+                `<div>
+                     ('광주_서구', '군집2', 4.158870426506276)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ea51f00f55b46098f40dd283962449b = L.marker(
+                [35.09405737, 126.8567385],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_4f79a9001d224dce9225c892eb23d5d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5ea51f00f55b46098f40dd283962449b.setIcon(icon_4f79a9001d224dce9225c892eb23d5d1);
+        
+    
+            marker_5ea51f00f55b46098f40dd283962449b.bindTooltip(
+                `<div>
+                     ('광주_남구', '군집2', 4.109616710134164)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3bbe11257af54a12866014c64d29bf1b = L.marker(
+                [35.19324913, 126.9254668],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_e13d33ed5e9b497cb65d579e08845459 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3bbe11257af54a12866014c64d29bf1b.setIcon(icon_e13d33ed5e9b497cb65d579e08845459);
+        
+    
+            marker_3bbe11257af54a12866014c64d29bf1b.bindTooltip(
+                `<div>
+                     ('광주_북구', '군집2', 5.120783810372419)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3a8c7037d5d4c959cb089c238ace402 = L.marker(
+                [35.16504314, 126.752903],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_68800f4695dd43d3817d49b9fe575d7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_a3a8c7037d5d4c959cb089c238ace402.setIcon(icon_68800f4695dd43d3817d49b9fe575d7c);
+        
+    
+            marker_a3a8c7037d5d4c959cb089c238ace402.bindTooltip(
+                `<div>
+                     ('광주_광산구', '군집3', 5.856937925691087)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53eb10a45f164a3b9cf53edf10733a7f = L.marker(
+                [36.32396534, 127.4750627],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_2ac1dfad547146d9a8e26fe32ec0d46a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_53eb10a45f164a3b9cf53edf10733a7f.setIcon(icon_2ac1dfad547146d9a8e26fe32ec0d46a);
+        
+    
+            marker_53eb10a45f164a3b9cf53edf10733a7f.bindTooltip(
+                `<div>
+                     ('대전_동구', '군집2', 4.589931334687531)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_430b2bc21e71414d9b9f55ac97bec7db = L.marker(
+                [36.28087229, 127.4110567],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_025b2ae4a6e14f3a9ea85f327ba808ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_430b2bc21e71414d9b9f55ac97bec7db.setIcon(icon_025b2ae4a6e14f3a9ea85f327ba808ac);
+        
+    
+            marker_430b2bc21e71414d9b9f55ac97bec7db.bindTooltip(
+                `<div>
+                     ('대전_중구', '군집2', 4.301410878693723)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f367309a66e3457298a12c76edc728fd = L.marker(
+                [36.28026323, 127.3451254],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_170904a49e2a45afbc5a914967a1044e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f367309a66e3457298a12c76edc728fd.setIcon(icon_170904a49e2a45afbc5a914967a1044e);
+        
+    
+            marker_f367309a66e3457298a12c76edc728fd.bindTooltip(
+                `<div>
+                     ('대전_서구', '군집2', 4.307267102999448)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0551dc9906b94423a35cfdb0eb329b7e = L.marker(
+                [36.37682167, 127.333298],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_d27ebe35e8c54a82b4487653089ee791 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_0551dc9906b94423a35cfdb0eb329b7e.setIcon(icon_d27ebe35e8c54a82b4487653089ee791);
+        
+    
+            marker_0551dc9906b94423a35cfdb0eb329b7e.bindTooltip(
+                `<div>
+                     ('대전_유성구', '군집3', 6.040362086394399)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b277e98eef74a33aa06df7127441e1b = L.marker(
+                [36.41219042, 127.4401591],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_417b01b9d1c346ceb11d0d4aef3865ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_3b277e98eef74a33aa06df7127441e1b.setIcon(icon_417b01b9d1c346ceb11d0d4aef3865ae);
+        
+    
+            marker_3b277e98eef74a33aa06df7127441e1b.bindTooltip(
+                `<div>
+                     ('대전_대덕구', '군집3', 5.48983429667243)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c25981098c0452f900a636e893bf394 = L.marker(
+                [35.5710483, 129.3082427],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_e9d0f80081e4498fb3294de515befa15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_7c25981098c0452f900a636e893bf394.setIcon(icon_e9d0f80081e4498fb3294de515befa15);
+        
+    
+            marker_7c25981098c0452f900a636e893bf394.bindTooltip(
+                `<div>
+                     ('울산_중구', '군집3', 5.682073156764988)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_757617cf6ac64e45a645329e202426dd = L.marker(
+                [35.51605166, 129.3281901],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_e750c725f47f40a5a6dd60ae0e15af35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_757617cf6ac64e45a645329e202426dd.setIcon(icon_e750c725f47f40a5a6dd60ae0e15af35);
+        
+    
+            marker_757617cf6ac64e45a645329e202426dd.bindTooltip(
+                `<div>
+                     ('울산_남구', '군집2', 4.04087303535381)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c60ec0c5dfda4cba8580cb7c22a119a5 = L.marker(
+                [35.52558, 129.4260695],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_afff821872ef484abed5bef9dbc64799 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_c60ec0c5dfda4cba8580cb7c22a119a5.setIcon(icon_afff821872ef484abed5bef9dbc64799);
+        
+    
+            marker_c60ec0c5dfda4cba8580cb7c22a119a5.bindTooltip(
+                `<div>
+                     ('울산_동구', '군집3', 5.464600313952117)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e9dcb273d67c4a8d82bc74a8dc707dd3 = L.marker(
+                [35.6100624, 129.3798015],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_27c52f72a4fa41cb99ff3e2b4ee63a70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_e9dcb273d67c4a8d82bc74a8dc707dd3.setIcon(icon_27c52f72a4fa41cb99ff3e2b4ee63a70);
+        
+    
+            marker_e9dcb273d67c4a8d82bc74a8dc707dd3.bindTooltip(
+                `<div>
+                     ('울산_북구', '군집1', 8.043699150216774)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b5121aa2f7824348a52a66b8d8b1e988 = L.marker(
+                [35.54669692, 129.1868265],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_842e0ab1dbb94db8a8ae6a662f94d0c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_b5121aa2f7824348a52a66b8d8b1e988.setIcon(icon_842e0ab1dbb94db8a8ae6a662f94d0c1);
+        
+    
+            marker_b5121aa2f7824348a52a66b8d8b1e988.bindTooltip(
+                `<div>
+                     ('울산_울주군', '군집1', 6.642158673026372)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8029784c60bf4d269a647be2663268ce = L.marker(
+                [36.56072897, 127.258722],
+                {}
+            ).addTo(map_f2550f67ff8d4236bfb9b7413b039ddc);
+        
+    
+            var icon_4f1aaff096f24186be18ed66c2a4eeb5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_8029784c60bf4d269a647be2663268ce.setIcon(icon_4f1aaff096f24186be18ed66c2a4eeb5);
+        
+    
+            marker_8029784c60bf4d269a647be2663268ce.bindTooltip(
+                `<div>
+                     ('세종시', '군집3', 5.556881571033723)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
