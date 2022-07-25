@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ImageCardList :images="images"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ImageCardList from '@/components/ImageCardList.vue'
+import { ref } from 'vue'
+import axios from 'axios'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    ImageCardList
+  },
+  setup() {
+    const images = ref([])
+
+    const getRandomImages = async (count) => {
+      try {
+        const res = await axios.get(process.env.VUE_APP_URL + 'photos/random/', {
+          headers: {
+            Authorization: 'Client-ID ' + process.env.VUE_APP_ACCESS_KEY
+          },
+          params: {
+            count
+          }
+        })
+        // Binding data to this component data
+        images.value = res.data
+        console.log(res.data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    getRandomImages(30)
+
+    return {
+      images
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
