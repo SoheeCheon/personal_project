@@ -5,11 +5,12 @@
   <form v-else @submit.prevent="onSave">
     <div class="row">
       <div class="col-6">
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label>Subject</label>
             <input type="text" class="form-control" v-model="todo.subject">
             <div v-if="subjectError" style="color:red" class="mb-3"> {{subjectError}}</div>
-          </div>
+          </div> -->
+          <Input v-model:subject="todo.subject" label="Subject" :error="subjectError"/>
       </div>
       <div v-if="editing" class="col-6">
         <div class="form-group">
@@ -38,16 +39,18 @@
 </template>
 
 <script>
-import {ref, computed } from 'vue'
+import {ref, computed, onUpdated } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import axios from 'axios'
+import axios from '@/axios.js'
 import _ from 'lodash'
 import ToastAlert from '@/components/ToastAlert.vue'
 import { useToast } from '@/composables/toast'
+import Input from '@/components/TodoInput.vue'
 
 export default {
   components: {
-    ToastAlert
+    ToastAlert,
+    Input
   },
   props: {
     editing: {
@@ -75,10 +78,14 @@ export default {
       tiggerToast
     } = useToast()
 
+    onUpdated(() => {
+      console.log(todo.value.subject)
+    })
+
     const getTodo = async () => {
       loading.value = true
       try {
-        const res = await axios.get('http://localhost:3000/todos/' + todoId)
+        const res = await axios.get('todos' + todoId)
         
         todo.value = {...res.data}
         originalTodo.value = {...res.data}
@@ -119,11 +126,11 @@ export default {
           body: todo.value.body
         }
         if (props.editing) {
-          res = await axios.put('http://localhost:3000/todos/' + todoId, data)
+          res = await axios.put('todos' + todoId, data)
           // 갱신 
           originalTodo.value = {...res.data}
         } else {
-          res = await axios.post('http://localhost:3000/todos/' , data)
+          res = await axios.post('todos' , data)
           // 초기화
           todo.value.subject = ''
           todo.value.body = ''
@@ -153,7 +160,7 @@ export default {
       showToast,
       toastMessage,
       toastAlertType,
-      subjectError
+      subjectError,
     }
   }
 }

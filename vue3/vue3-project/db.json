@@ -87,7 +87,7 @@
     },
     {
       "subject": "자아자아???",
-      "completed": false,
+      "completed": true,
       "id": 20
     },
     {
@@ -97,14 +97,8 @@
     },
     {
       "subject": "수정된 22째 페이지??",
-      "completed": true,
-      "id": 22
-    },
-    {
-      "subject": "산다 우유",
       "completed": false,
-      "body": "산다 우유!!!",
-      "id": 24
+      "id": 22
     }
   ]
 }

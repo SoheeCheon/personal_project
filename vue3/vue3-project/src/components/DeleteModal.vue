@@ -1,12 +1,15 @@
 <template>
   <Modal>
-    <template v-slot:title>
+    <template #title>
       DeleteTodo!!
+
+      <button type="button" class="btn btn-secondary" @click="onClose">Close</button>
+      <button type="button" class="btn btn-danger" @click="onDelete">Delete</button>
     </template>
-    <template v-slot:body>
+    <template #body>
       Are you sure you want delete this todo?
     </template>
-    <template v-slot:footer>
+    <template #footer>
       <button type="button" class="btn btn-secondary" @click="onClose">Close</button>
       <button type="button" class="btn btn-danger" @click="onDelete">Delete</button>
     </template>

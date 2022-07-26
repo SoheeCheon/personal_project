@@ -1,16 +1,18 @@
 <template>
-  <ImageCardList :images="images"/>
+  <masonry-wall :images="images" :ssr-columns="1" :column-width="300" :padding="16">
+    <template #default="{ image }">
+      <img :src="image.urls.small" class="image" :style="{ width: '100%' }" />
+    </template>
+  </masonry-wall>
 </template>
 
 <script>
-import ImageCardList from '@/components/ImageCardList.vue'
-import { ref } from 'vue'
+// import ImageCardList from '@/components/ImageCardList.vue'
+import { onMounted, ref } from 'vue'
 import axios from 'axios'
+import VueMasornyWall from '@/vue-masorny-wall.vue'
 
 export default {
-  components: {
-    ImageCardList
-  },
   setup() {
     const images = ref([])
 
@@ -32,7 +34,9 @@ export default {
       }
     }
 
-    getRandomImages(30)
+    onMounted(() => {
+      getRandomImages(30)
+    })    
 
     return {
       images
@@ -42,4 +46,37 @@ export default {
 </script>
 
 <style>
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 20%;
+}
+
+.grid-item {
+  height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
 </style>

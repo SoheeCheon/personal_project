@@ -3,7 +3,8 @@
     <div class="heading">
       <h1>Masonry Layout Design Examples</h1>
     </div>
-    <div class="cards" v-if="images.length">
+    <div class="grid" v-if="images.length">
+      <div class="grid-sizer"></div>
       <ImageCard v-for="image in images" :key="image.id" :image="image" />
     </div>
     <div class="cards-loading" v-else>Loading image....</div>
@@ -12,6 +13,8 @@
 
 <script>
 import ImageCard from '@/components/ImageCard.vue'
+import { createApp } from 'vue'
+import MasonryWall from '@yeger/vue-masonry-wall'
 
 export default {
   components:{
@@ -22,17 +25,20 @@ export default {
       type: Array,
       require: true
     }
+  },
+  setup() {
+    const app = createApp()
+
+    app.use(MasonryWall)
+
   }
 }
+
+
+    
 </script>
 
 <style>
-.wrapper .cards {
-  display: grid;
-  column-gap: 10px;
-  row-gap: 7px;
-  grid-template-columns: repeat(3, 400px);
-  justify-content: center;
-  max-width: var(--card-container-width);
-}
+
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card"
+    class="grid-item"
     :style="{
       height: tH + 'px',
       gridRowEnd: gap,

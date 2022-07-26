@@ -1,0 +1,29 @@
+import sys
+sys.setrecursionlimit(10 ** 8)
+
+n = int(input())
+
+arr = [[] for _ in range(n+1)]
+ans = 0
+
+# 해당하는 인덱스에 자식노드와 거리를 입력
+for _ in range(n-1):
+    p, c, d = map(int, input().split())
+    arr[p].append([c, d])
+
+def DFS(now, dis):
+    left, right = 0, 0
+    for next, d in arr[now]:
+        r = DFS(next, d)
+        if left <= right:
+            left = max(left, r)
+        else:
+            right = max(right, r)
+
+    global ans
+    ans = max(ans, left + right)
+    return max(left+dis, right+dis)
+
+DFS(1, 0)
+
+print(ans)
