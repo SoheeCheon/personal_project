@@ -1,10 +1,12 @@
-import { ref, onUnmounted } from 'vue'
+import { computed, onUnmounted } from 'vue'
+import { useStore } from 'vuex'
 
 export const useToast = () => {
-  const showToast = ref(false)
-  const toastMessage = ref('')
-  const toastAlertType = ref('')
-  const toastTimeOut = ref(null)
+  const store = useStore()
+  const showToast = computed(() => store.state.showToast)
+  const toastMessage = computed(() => store.state.toastMessage)
+  const toastAlertType = computed(() => store.state.toastAlertType)
+  const toastTimeOut = computed(() => store.state.toastTimeOut)
 
   const tiggerToast = (message,type = 'success') => {
     showToast.value = true

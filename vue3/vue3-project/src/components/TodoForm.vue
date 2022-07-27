@@ -46,6 +46,7 @@ import _ from 'lodash'
 import ToastAlert from '@/components/ToastAlert.vue'
 import { useToast } from '@/composables/toast'
 import Input from '@/components/TodoInput.vue'
+// import { useStore } from 'vuex'
 
 export default {
   components: {
@@ -59,6 +60,7 @@ export default {
     }
   },
   setup(props) {
+    // const store = useStore()
     const route = useRoute()
     const router = useRouter()
     const todo = ref({
@@ -85,7 +87,7 @@ export default {
     const getTodo = async () => {
       loading.value = true
       try {
-        const res = await axios.get('todos' + todoId)
+        const res = await axios.get('todos/' + todoId)
         
         todo.value = {...res.data}
         originalTodo.value = {...res.data}
@@ -126,7 +128,7 @@ export default {
           body: todo.value.body
         }
         if (props.editing) {
-          res = await axios.put('todos' + todoId, data)
+          res = await axios.put('todos/' + todoId, data)
           // 갱신 
           originalTodo.value = {...res.data}
         } else {
@@ -139,6 +141,12 @@ export default {
         const message = `SuccessFully` + (props.editing ? ' Updated!' : ' Created!')
        
         tiggerToast(message)
+
+        if (!props.editing) {
+          router.push({
+            name: 'Todos'
+          })
+        }
       } catch(error) {
         console.log(error)
         tiggerToast('Something went wrong', 'danger')

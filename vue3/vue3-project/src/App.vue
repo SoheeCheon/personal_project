@@ -13,12 +13,34 @@
 <div class="container">
   <router-view/>
 </div>
-  
+<Toast v-show="showToast" :message="toastMessage" :type="toastAlertType"/>
 </template>
 
 <script>
-export default {
+import Toast from'@/components/ToastAlert.vue'
+import { useToast } from '@/composables/toast'
 
+export default {
+  components: {
+    Toast
+  },
+  setup() {
+     const {
+      toastMessage,
+      toastAlertType,
+      showToast,
+      tiggerToast
+    } = useToast()
+
+    console.log(showToast.value)
+
+    return {
+      toastMessage,
+      toastAlertType,
+      showToast,
+      tiggerToast
+    }
+  }
 }
 </script>
 
