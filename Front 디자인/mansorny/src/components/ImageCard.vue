@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { round } from 'mathjs'
 
 export default {
@@ -25,15 +25,14 @@ export default {
       required: true
     }
   },
-  setup() {
+  setup(props) {
     const tH = ref(null)
     const gap = ref(null)
 
-    onMounted(() => {
-        tH.value = round(this.image.height / (this.image.width / 400))
-        gap.value = round(this.tH / 10)
-        gap.value = `span ${gap.value}`
-    })
+    tH.value = round(props.image.height / (props.image.width / 300))
+    gap.value = round(tH.value / 10)
+    gap.value = `span ${gap.value}`
+
 
     return {
         tH,
