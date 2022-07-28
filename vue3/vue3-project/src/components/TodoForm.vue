@@ -33,9 +33,6 @@
     <button type="submit" class="btn btn-primary m-2" :disabled="!todoUpdated">{{ editing ? 'Update' : 'Create' }}</button>
     <button @click="moveToTodoListPage" class="btn btn-outline-dark" >Cancel</button>
   </form>
-  <transition name="fade">
-    <ToastAlert v-show="showToast" :message="toastMessage" :type="toastAlertType"/>
-  </transition>
 </template>
 
 <script>
@@ -43,14 +40,12 @@ import {ref, computed, onUpdated } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import axios from '@/axios.js'
 import _ from 'lodash'
-import ToastAlert from '@/components/ToastAlert.vue'
 import { useToast } from '@/composables/toast'
 import Input from '@/components/TodoInput.vue'
 // import { useStore } from 'vuex'
 
 export default {
   components: {
-    ToastAlert,
     Input
   },
   props: {
@@ -174,7 +169,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s ease;

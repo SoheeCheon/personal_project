@@ -1,10 +1,6 @@
 import { createStore } from "vuex";
+import modules from "./modules";
 
 export default createStore({
-    state: {
-        showToast: false,
-        toastMessage: '',
-        toastAlertType: '',
-        toastTimeOut: null
-    }
+    modules
 })
