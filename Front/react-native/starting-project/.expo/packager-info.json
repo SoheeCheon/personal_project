@@ -1,9 +1,9 @@
 {
   "expoServerPort": null,
-  "packagerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://kq-xgk.anonymous.starting-project.exp.direct",
+  "packagerNgrokUrl": "https://kq-xgk.anonymous.starting-project.exp.direct",
+  "ngrokPid": 8668,
   "packagerPid": null,
   "webpackServerPort": null
 }

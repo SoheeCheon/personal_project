@@ -2,51 +2,44 @@ from collections import deque
 import copy
 
 N, M = map(int, input().split())
-
-# arr를 string 배열로 한다.
-string_arr = [input() for  _ in range(N)]
 arr = []
-for n in range(N):
-    lst = []
-    for m in range(M):
-        if string_arr[n][m] == '1':
-            lst.append(-1)
-        else:
-            lst.append(0)
-    arr.append(lst)
 
-que = deque([])
+# 벽을 부시는 여부를 3차원 배열로 감지한다.
+visited = [[[0] * 2 for _ in range(M)] for _ in range(N)]
+# 0,0 에서 시작하기 때문에 미리 방문 처리
+visited[0][0][0] = 1
 
-di = [0, 0, 1, -1]
-dj = [1, -1, 0, 0]
-ans = 999999
+for i in range(N):
+    arr.append(list(map(int, input())))
+
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
 
 
-def bfs():
-    global ans
-    copy_arr = copy.deepcopy(arr)
-    que.append((0, 0))
+def bfs(x, y, z):
+    que = deque([])
+    que.append((x, y, z))
+
     while que:
-        ci, cj = que.popleft()
-        for idx in range(4):
-            ni = ci + di[idx]
-            nj = cj + dj[idx]
-            if 0 <= ni < N and 0 <= nj < M and copy_arr[ni][nj] == 0:
-                copy_arr[ni][nj] = copy_arr[ci][cj] + 1
-                que.append((ni, nj))
+        cx, cy, cz = que.popleft()
+        if cx == N -1 and cy == M - 1:
+            return visited[cx][cy][cz]
 
-    if (copy_arr[N-1][M-1] > 0):
-        ans = min(ans, copy_arr[N-1][M-1])
+        for i in range(4):
+            nx = cx + dx[i]
+            ny = cy + dy[i]
+            if not(0 <= nx < N and 0 <= ny < M):
+                continue
 
-bfs()
-for n in range(N):
-    for m in range(M):
-        if arr[n][m] == -1:
-            arr[n][m] = 0
-            bfs()
-            arr[n][m] = -1
+            # 범위안이고 아직 벽을 부수지 않았다면
+            if arr[nx][ny] == 1 and cz == 0:
+                visited[nx][ny][1] = visited[cx][cy][0] + 1
+                que.append((nx, ny, 1))
+            # 벽이 아니고 한번도 방문하지 않았다면
+            elif arr[nx][ny] == 0 and visited[nx][ny][cz] == 0:
+                visited[nx][ny][cz] = visited[cx][cy][cz] + 1
+                que.append((nx, ny, cz))
+    return -1
 
-if ans == 999999:
-    print(-1)
-    exit(0)
-print(ans+1)
+
+print(bfs(0,0,0))
