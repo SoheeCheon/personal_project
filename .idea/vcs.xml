@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/nextjs-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/react-button-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/react-netfilx-clone" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/react-redux-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/react-redux-toolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/react-testing-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/myreact/react-todo-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react 공부/react-a_z/react-redux-toolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react-native/RNCOUNT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react-native/RNCourse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Front/react-native/my-project" vcs="Git" />
+  </component>
+</project>
