@@ -8,24 +8,23 @@ result = 999999999999
 def bfs(now):
     global result
     que = deque()
-    que.append((now, rgb[0][now]))
-    house_num = 1
+    que.append((0, now, rgb[0][now]))
     while que:
-        n, n_sum = que.popleft()
-
+        house, n, n_sum = que.popleft()
         if result < n_sum:
-            return
+            continue
 
-        if house_num >= N:
+        if house >= (N-1):
             result = n_sum
-            return
+            continue
 
         for i in range(3):
             if n != i:
-                que.append((i, n_sum + rgb[house_num][i]))
-        house_num += 1
+                que.append((house + 1, i, n_sum + rgb[house + 1][i]))
+
 
 for a in range(3):
     bfs(a)
+
 print(result)
 
