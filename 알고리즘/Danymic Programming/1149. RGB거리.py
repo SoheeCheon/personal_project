@@ -1,30 +1,10 @@
-from collections import deque
-
 N = int(input())
 
 rgb = [list(map(int, input().split())) for _ in range(N)]
-result = 999999999999
 
-def bfs(now):
-    global result
-    que = deque()
-    que.append((0, now, rgb[0][now]))
-    while que:
-        house, n, n_sum = que.popleft()
-        if result < n_sum:
-            continue
+for n in range(1, N):
+    rgb[n][0] += min(rgb[n - 1][1], rgb[n - 1][2])
+    rgb[n][1] += min(rgb[n - 1][0], rgb[n - 1][2])
+    rgb[n][2] += min(rgb[n - 1][1], rgb[n - 1][0])
 
-        if house >= (N-1):
-            result = n_sum
-            continue
-
-        for i in range(3):
-            if n != i:
-                que.append((house + 1, i, n_sum + rgb[house + 1][i]))
-
-
-for a in range(3):
-    bfs(a)
-
-print(result)
-
+print(min(rgb[N-1][0], rgb[N-1][1], rgb[N-1][2]))

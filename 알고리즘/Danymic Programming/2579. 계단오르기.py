@@ -1,33 +1,20 @@
-from collections import deque
-
 n = int(input())
-stair = [0]
-for _ in range(n):
-    stair.append(int(input()))
 
-# 각 계단에 대한 최대값이 들어갈 배열
-max_stair = [0] * (n + 1)
+# 계단의 최대 계수는 300개이기에
+stair = [0] * 301
+save = [0] * 301
 
-def bfs():
-    global max_stair, stair
-    que = deque()
-    # 현재 위치, 연속된 1의 갯수, 합이 que에 저장되있다.
-    que.append((0, 0, 0))
-    while que:
-        now, cnt1, ssum = que.popleft()
-        if max_stair[now] < ssum:
-            max_stair[now] = ssum
+# 계단값 저장
+for i in range(n):
+    stair[i] = int(input())
 
-        for i in range(1, 3):
-            # 범위안에 있을 때
-           if now + i <= n:
-                if i == 1 and cnt1 < 2:
-                    que.append((now+i, cnt1 + 1, ssum + stair[now+i]))
+save[0] = stair[0]
+save[1] = stair[0] + stair[1]
+save[2] = max(stair[1] + stair[2], stair[0] + stair[2])
 
-                elif i == 2:
-                    que.append((now+i, 1, ssum + stair[now+i]))
+# 마지막 계단의 전 계단을 밟은 경우
+# 마지막 계단의 전 계단을 밟지 않은 경우로 나뉘어서 계산한다.
+for i in range(3, n):
+    save[i] = max(save[i-3] + stair[i-1] + stair[i], save[i-2] + stair[i])
 
-bfs()
-print(max_stair[n])
-
-
+print(save[n-1])
